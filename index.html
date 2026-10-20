@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | St. Xavier's Senior Secondary School</title>
+  <meta name="description" content="St. Xavier's Senior Secondary School, Ramnagar: a CBSE-Affiliated, co-educational, English-medium school from Nursery to Class 12.">
+  <meta property="og:title" content="Home | St. Xavier's Senior Secondary School">
+  <meta property="og:description" content="St. Xavier's Senior Secondary School, Ramnagar: a CBSE-Affiliated, co-educational, English-medium school from Nursery to Class 12.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Hero slider (slides come from data.js -> heroSlides) -->
+    <section class="hero" id="hero">
+      <div class="container hero__content">
+        <p class="hero__tag" data-bind="school.tagline">Committed to Ensure Quality Education</p>
+        <h1>
+          <span class="line"><span class="word" style="--d:0.2s">Nurturing</span><span class="word" style="--d:0.35s">Minds,</span></span>
+          <span class="line"><span class="word" style="--d:0.5s">Building</span><span class="word" style="--d:0.65s">Futures</span></span>
+        </h1>
+        <div class="hero__rest">
+          <p class="hero__lead">A CBSE-Affiliated, co-educational, English-medium school in Ramnagar, Ambedkar Nagar, offering quality education from Nursery to Class 12.</p>
+          <div class="hero__cta">
+            <a class="btn btn--on-dark" data-href="links.apply" href="#" target="_blank" rel="noopener noreferrer">Apply for Admission <i data-icon="arrow-right"></i></a>
+          </div>
+          <p class="hero__meta">CBSE Affiliation No. <span data-bind="school.affiliationNo"></span> · School Code <span data-bind="school.schoolCode"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counters -->
+    <section class="stats bg-night">
+      <div class="container">
+        <div class="grid" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- About preview -->
+    <section class="section bg-paper">
+      <div class="container split split--2">
+        <div class="reveal">
+          <p class="eyebrow">About Us</p>
+          <h2>Building bright futures, one student at a time</h2>
+          <p class="body">St. Xavier's Senior Secondary School, a branch of St. Xavier's Group of Schools, has been serving Ramnagar, Ambedkar Nagar since 2012. As a CBSE-affiliated, co-educational, English-medium school from Nursery to Class 12, we combine academic excellence with activity-based learning and strong values, so that every child grows in knowledge, confidence and character.</p>
+          <a class="btn btn--on-light" href="about.html">Read More <i data-icon="arrow-right"></i></a>
+        </div>
+        <div class="reveal" style="--delay:0.15s">
+          <div class="photo-ph ratio-43 rounded-2xl" role="img" aria-label="School campus (placeholder image)"><i data-icon="image"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities (cards come from data.js -> facilities) -->
+    <section class="section bg-cloud">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Facilities</p>
+          <h2>Everything your child needs to grow</h2>
+        </div>
+        <div class="cards-3" id="facilities"></div>
+      </div>
+    </section>
+
+    <!-- Toppers (data.js -> toppers) -->
+    <section class="section bg-night">
+      <div class="container">
+        <div class="section-heading section-heading--center section-heading--light reveal">
+          <p class="eyebrow" id="toppers-title"></p>
+          <h2>Our Proud Toppers</h2>
+        </div>
+        <div class="toppers" id="toppers"></div>
+        <div class="dots" id="toppers-dots"></div>
+      </div>
+    </section>
+
+    <!-- Notices (data.js -> notices) -->
+    <section class="section bg-paper">
+      <div class="container container--narrow">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Notice Board</p>
+          <h2>Latest Notices</h2>
+        </div>
+        <ul class="notices" id="notices"></ul>
+        <div class="center-cta"><a class="btn btn--outline-light" href="blog.html">View All</a></div>
+      </div>
+    </section>
+
+    <!-- Admission CTA -->
+    <section class="cta hero-grid bg-ink">
+      <div class="container reveal">
+        <h2>Admission Open</h2>
+        <p>Admissions are open from Nursery to Class 12, with Science, Commerce and Arts streams for Classes 11 and 12.</p>
+        <div class="cta__btns">
+          <a class="btn btn--on-dark" data-href="links.apply" href="#" target="_blank" rel="noopener noreferrer">Apply Online</a>
+          <a class="btn btn--outline-dark" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Scripts: order matters -->
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/hero-slider.js"></script>
+  <script src="js/toppers.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | St. Xavier's Senior Secondary School</title>
+  <meta name="description" content="Address, phone number, school hours and map for St. Xavier's Senior Secondary School, Ramnagar, Ambedkar Nagar.">
+  <meta property="og:title" content="Contact Us | St. Xavier's Senior Secondary School">
+  <meta property="og:description" content="Address, phone number, school hours and map for St. Xavier's Senior Secondary School, Ramnagar, Ambedkar Nagar.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero hero-grid bg-ink">
+      <div class="container">
+        <div class="reveal">
+          <h1>Contact Us</h1>
+        <p>We would be happy to hear from you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--md bg-paper">
+      <div class="container contact-grid">
+        <div class="info-stack reveal">
+          <div class="info-card">
+            <i data-icon="map-pin"></i>
+            <div><h2>Address</h2><p data-bind="school.address"></p></div>
+          </div>
+          <div class="info-card">
+            <i data-icon="phone"></i>
+            <div><h2>Phone</h2><a data-href="school.phoneHref" data-bind="school.phones.0" href="#"></a></div>
+          </div>
+          <div class="timings">
+            <div class="timings__head">
+              <h2><i data-icon="clock"></i>Timings</h2>
+              <div class="switch" id="season-switch" role="tablist" aria-label="Season">
+                <button type="button" role="tab" data-season="summer" aria-selected="true">summer</button>
+                <button type="button" role="tab" data-season="winter" aria-selected="false">winter</button>
+              </div>
+            </div>
+            <dl>
+              <div><dt>School hours</dt><dd id="hours-school"></dd></div>
+              <div><dt>Office hours</dt><dd id="hours-office"></dd></div>
+              <div><dt>Recess</dt><dd id="hours-recess"></dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="reveal" style="--delay:0.1s">
+          <form class="form-card" id="contact-form">
+            <h2>Send us a message</h2>
+            <p class="hint">Your message will open in WhatsApp, ready to send.</p>
+            <div class="form-fields">
+              <label>Name<input class="field" name="name" required maxlength="80" autocomplete="name"></label>
+              <label>Phone<input class="field" name="phone" type="tel" required maxlength="15" pattern="[0-9+ ]{7,15}" inputmode="tel" autocomplete="tel"></label>
+              <label>Message<textarea class="field" name="message" required maxlength="1000" rows="5"></textarea></label>
+            </div>
+            <button class="btn btn--on-light btn--block" type="submit">Send via WhatsApp <i data-icon="send"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="container map">
+        <iframe title="Map of St. Xavier's Senior Secondary School, Ramnagar" data-src="school.mapEmbed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Scripts: order matters -->
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

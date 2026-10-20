@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admission | St. Xavier's Senior Secondary School</title>
+  <meta name="description" content="Admission process, documents required and classes available (Nursery to Class 12) at St. Xavier's Senior Secondary School.">
+  <meta property="og:title" content="Admission | St. Xavier's Senior Secondary School">
+  <meta property="og:description" content="Admission process, documents required and classes available (Nursery to Class 12) at St. Xavier's Senior Secondary School.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero hero-grid bg-ink">
+      <div class="container">
+        <div class="reveal">
+          <h1>Admission</h1>
+        <p>Admissions are open from Nursery to Class 12.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-paper">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">How to apply</p>
+          <h2>Admission Process</h2>
+        </div>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </section>
+
+    <section class="section bg-night">
+      <div class="container two-col">
+        <div class="panel reveal">
+          <h2>Documents Required</h2>
+          <ul class="checklist" id="documents"></ul>
+        </div>
+        <div class="panel reveal" style="--delay:0.1s">
+          <h2>Classes Available</h2>
+          <p class="panel__meta"><span data-bind="school.classes"></span> · <span data-bind="school.type"></span> · <span data-bind="school.medium"></span></p>
+          <h3>Streams for Classes 11 and 12</h3>
+          <div class="chips" id="streams"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-paper">
+      <div class="container container--text">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div id="faq"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Scripts: order matters -->
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

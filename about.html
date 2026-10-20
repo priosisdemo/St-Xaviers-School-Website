@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | St. Xavier's Senior Secondary School</title>
+  <meta name="description" content="Learn about St. Xavier's Senior Secondary School: our vision, mission, leadership and teachers.">
+  <meta property="og:title" content="About Us | St. Xavier's Senior Secondary School">
+  <meta property="og:description" content="Learn about St. Xavier's Senior Secondary School: our vision, mission, leadership and teachers.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero hero-grid bg-ink">
+      <div class="container">
+        <div class="reveal">
+          <h1>About Us</h1>
+        <p><span data-bind="school.group"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-paper">
+      <div class="container split split--auto">
+        <div class="reveal">
+          <h2>Welcome to St. Xavier's</h2>
+          <p class="body">Founded in 2012, St. Xavier's Senior Secondary School is a CBSE-affiliated, co-educational, English-medium school offering education from Nursery to Class 12, with Science, Commerce and Arts streams at the senior secondary level. We believe every child deserves a caring environment, dedicated teachers and opportunities to discover their potential.</p>
+          <dl class="facts">
+            <div><dt>CBSE Affiliation No.</dt><dd data-bind="school.affiliationNo"></dd></div>
+            <div><dt>School Code</dt><dd data-bind="school.schoolCode"></dd></div>
+            <div><dt>UDISE Code</dt><dd data-bind="school.udise"></dd></div>
+            <div><dt>Founded</dt><dd data-bind="school.founded"></dd></div>
+          </dl>
+        </div>
+        <div class="reveal" style="--delay:0.15s" id="about-logo"></div>
+      </div>
+    </section>
+
+    <section class="section bg-night">
+      <div class="container two-col">
+        <div class="vm-card lift reveal">
+          <i data-icon="eye"></i>
+          <h3>Our Vision</h3>
+          <p>To be a centre of value-based quality education where every child is inspired to think creatively, learn joyfully and grow into a responsible, confident citizen.</p>
+        </div>
+        <div class="vm-card lift reveal" style="--delay:0.1s">
+          <i data-icon="target"></i>
+          <h3>Our Mission</h3>
+          <p>To deliver academic excellence through activity-based learning, nurture creativity and curiosity, and instil strong moral values that prepare students for success in life.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-cloud">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Leadership</p>
+          <h2>Guiding Our School</h2>
+        </div>
+        <div class="two-col" id="leadership"></div>
+      </div>
+    </section>
+
+    <section class="section bg-paper">
+      <div class="container">
+        <div class="section-heading section-heading--center reveal">
+          <p class="eyebrow">Our Team</p>
+          <h2>Meet Our Teachers</h2>
+        </div>
+        <div class="teachers" id="teachers"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Scripts: order matters -->
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

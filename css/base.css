@@ -1,0 +1,145 @@
+/* ==========================================================================
+   base.css — Design tokens, reset, typography, shared utilities
+   Colours / fonts / radius yahin se change hote hain.
+   ========================================================================== */
+
+:root {
+  /* Palette */
+  --ink: #06141b;
+  --night: #11212d;
+  --slate: #253745;
+  --steel: #4a5c6a;
+  --mist: #9ba8ab;
+  --cloud: #ccd0cf;
+  --paper: #ffffff;
+
+  /* Semantic */
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --border: color-mix(in srgb, var(--mist) 60%, transparent);
+
+  /* Type */
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Shape + depth */
+  --radius: 0.75rem;
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --shadow-card: 0 18px 40px -20px color-mix(in srgb, var(--ink) 45%, transparent);
+
+  /* Layout */
+  --header-h: 5rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+img, svg { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { font: inherit; color: inherit; background: none; cursor: pointer; }
+input, textarea { font: inherit; color: inherit; }
+table { border-collapse: collapse; }
+
+:focus-visible { outline: 2px solid var(--steel); outline-offset: 2px; }
+
+.icon { width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
+.icon-sm { width: 1rem; height: 1rem; }
+
+/* ---------- Container (same breakpoints as the original design) ---------- */
+.container { width: 100%; margin-inline: auto; padding-inline: 1rem; }
+@media (min-width: 640px)  { .container { max-width: 640px; } }
+@media (min-width: 768px)  { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+@media (min-width: 1536px) { .container { max-width: 1536px; } }
+.container--narrow { max-width: 56rem !important; }   /* notices */
+.container--text   { max-width: 48rem !important; }   /* legal, FAQ, blog post */
+
+/* ---------- Accessibility helpers ---------- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; left: 1rem; top: 1rem; z-index: 60; padding: 0.5rem;
+  border-radius: 0.25rem; background: var(--paper); color: var(--ink);
+  transform: translateY(-200%);
+}
+.skip-link:focus { transform: none; }
+
+/* ---------- Section backgrounds ---------- */
+.bg-paper { background-color: var(--paper); }
+.bg-cloud { background-color: var(--cloud); }
+.bg-night { background-color: var(--night); color: var(--paper); }
+.bg-ink   { background-color: var(--ink);   color: var(--paper); }
+
+.hero-grid {
+  background-image:
+    radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--steel) 35%, transparent), transparent 45%),
+    radial-gradient(circle at 85% 70%, color-mix(in srgb, var(--slate) 70%, transparent), transparent 50%),
+    linear-gradient(color-mix(in srgb, var(--mist) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--mist) 8%, transparent) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+}
+
+.section { padding-block: 6rem; }
+.section--md { padding-block: 5rem; }
+.section--sm { padding-block: 4rem; }
+
+/* ---------- Text helpers ---------- */
+.text-steel { color: var(--steel); }
+.text-mist  { color: var(--mist); }
+.text-center { text-align: center; }
+
+/* ---------- Scroll-reveal (JS adds .reveal; falls back to visible without JS) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+  transition-delay: var(--delay, 0s);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ---------- Page fade-in ---------- */
+main { animation: page-fade 0.4s ease; }
+@keyframes page-fade { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  main { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

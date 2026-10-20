@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | St. Xavier's Senior Secondary School</title>
+  <meta name="description" content="Photos of events, campus, classrooms and sports at St. Xavier's Senior Secondary School, Ramnagar.">
+  <meta property="og:title" content="Gallery | St. Xavier's Senior Secondary School">
+  <meta property="og:description" content="Photos of events, campus, classrooms and sports at St. Xavier's Senior Secondary School, Ramnagar.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero hero-grid bg-ink">
+      <div class="container">
+        <div class="reveal">
+          <h1>Gallery</h1>
+        <p>Moments from life at St. Xavier's.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section--sm bg-paper">
+      <div class="container">
+        <div class="tabs" id="gallery-tabs" role="tablist" aria-label="Gallery categories"></div>
+        <div class="masonry" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <button class="lightbox__close" type="button" aria-label="Close"><i data-icon="x"></i></button>
+      <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo"><i data-icon="chevron-left"></i></button>
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo"><i data-icon="chevron-right"></i></button>
+      <div class="lightbox__box" id="lightbox-body"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Scripts: order matters -->
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
